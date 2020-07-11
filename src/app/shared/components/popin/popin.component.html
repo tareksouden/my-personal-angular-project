@@ -1,0 +1,10 @@
+<div *ngIf="visible" class="popin--active popin popin--fixed popin--beneficiary">
+  <div class="popin__content popin__content--rounded popin__content--center">
+    <p class="title title--popin" [innerHtml]="message"></p>
+    <div class="popin__actions">
+      <button *ngIf="firstButton" (click)="firstButton.action()" class="popin__action button button--primary button--input button--rounded">{{firstButton.label}}</button>
+      <button *ngIf="secondButton" (click)="secondButton.action()" class="popin__action button button--secondary button--input button--rounded">{{secondButton.label}}</button>
+      <button *ngIf="thirdButton" (click)="thirdButton.action()" class="popin__action button button--primary button--input button--rounded">{{thirdButton.label}}</button>
+    </div>
+  </div>
+</div>
